@@ -88,6 +88,11 @@ class UI {
       play("confirm-ui", { speed: 1.5 })
       go("controls")
     })
+
+    onMousePress( () => {
+      play("confirm-ui", { speed: 1.5 })
+      go(1)
+    })
   }
 
   displayControlsMenu() {
@@ -120,6 +125,10 @@ class UI {
     )
 
     onKeyPress("enter", () => {
+      play("confirm-ui", { speed: 1.5 })
+      go(1)
+    })
+    onMousePress( () => {
       play("confirm-ui", { speed: 1.5 })
       go(1)
     })
