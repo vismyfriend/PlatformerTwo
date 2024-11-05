@@ -32,6 +32,7 @@ export const load = {
         "jump-down": 9,
       },
     })
+    
     loadSprite("bridge", "./assets/Bridge.png")
     loadSprite("spider-1", "./assets/Spider_1.png", {
       sliceX: 3,
@@ -49,7 +50,7 @@ export const load = {
         idle: 0,
       },
     })
-    loadSprite("forest-background", "./assets/Forest_Background_0.png")
+    loadSprite("forest-background", "./assets/background.jpg")
     loadSprite("grass-tileset", "./assets/Grass_Tileset.png", {
       sliceX: 3,
       sliceY: 4,

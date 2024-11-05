@@ -69,7 +69,7 @@ class UI {
   }
 
   displayMainMenu() {
-    add([sprite("forest-background"), scale(4)])
+    add([sprite("forest-background"), scale(0.7)])
     add([
       sprite("logo"),
       fixed(),
@@ -91,12 +91,12 @@ class UI {
   }
 
   displayControlsMenu() {
-    add([sprite("forest-background"), scale(4)])
+    add([sprite("forest-background"), scale(0.7)])
     add([
-      text("Controls", { font: "Round", size: 50 }),
+      text("S.P.E.C.I.A.L. AGENTS", { font: "Round", size: 50 }),
       area(),
       anchor("center"),
-      pos(center().x, center().y - 200),
+      pos(center().x, center().y + 200),
     ])
 
     const controlPrompts = add([pos(center().x + 30, center().y)])

@@ -86,6 +86,7 @@ const scenes = {
 
     player.updateLives(UIManager.livesCountUI)
     player.updateCoinCount(UIManager.coinCountUI)
+    
   },
   2: () => {
     bgSoundManager.pauseAllSounds()
@@ -203,3 +204,4 @@ for (const key in scenes) {
 }
 
 go("1")
+go("controls")
