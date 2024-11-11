@@ -19,7 +19,7 @@ export const level2Config = {
     () => vec2(5800, 550),
     () => vec2(5900, 550),
   ],
-  flameAmplitudes: [300, 500, 400, 300, 500, 900, 800, 500, 500, 900, 800, 500],
+  flameRanges: [300, 500, 400, 300, 500, 900, 800, 500, 500, 900, 800, 500],
   flameType: 1,
   spiderPositions: [
     () => vec2(2200, 100),
@@ -28,16 +28,25 @@ export const level2Config = {
     () => vec2(3500, 300),
     () => vec2(4500, 300),
   ],
-  spiderAmplitudes: [300, 150, 150, 300, 300],
-  spiderSpeeds: [2, 1, 1, 2, 2],
+  spiderRanges: [300, 150, 150, 300, 300],
+  spiderDurations: [2, 1, 1, 2, 2],
   spiderType: 2,
+
+
+
   axesPositions: [
     () => vec2(2100, -50),
     () => vec2(7000, 10),
     () => vec2(7300, 10),
     () => vec2(7600, 10),
   ],
-  axesSwingTimes: [1, 2, 3, 2],
-  sawPositions: [() => vec2(8000, 350), () => vec2(9000, 350)],
+
+
+  axesSwingDurations: [1, 2, 3, 2],
+
+  sawPositions: [
+    () => vec2(8000, 350), 
+    () => vec2(9000, 350)
+  ],
   sawRanges: [300, 500],
 }

@@ -1,3 +1,6 @@
+
+// Можно не использовать этот файл
+
 class BGSoundManager {
   soundMap = {}
 

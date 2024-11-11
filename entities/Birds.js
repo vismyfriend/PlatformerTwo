@@ -1,11 +1,11 @@
 export class Birds {
-  constructor(positions, ranges, type) {
+  constructor(positions, ranges) {
     this.ranges = ranges
     this.birds = []
     for (const position of positions) {
       this.birds.push(
         add([
-          sprite(`bird-${type}`, { anim: "fly" }),
+          sprite("bird", { anim: "fly" }),
           area({ shape: new Rect(vec2(0), 10, 10) }),
           anchor("center"),
           pos(position),
@@ -24,6 +24,7 @@ export class Birds {
     }
   }
 
+  // метод
   async fly(bird, moveBy, duration) {
     await tween(
       bird.pos.x,
@@ -47,18 +48,24 @@ export class Birds {
   setMovementPattern() {
     for (const [index, bird] of this.birds.entries()) {
       const flyLeft = bird.onStateEnter("fly-left", async () => {
+
+        // повортот спрайта базового 
         bird.flipX = false
+                                // движение пол секунды
         await this.fly(bird, -this.ranges[index], 0.5)
         bird.enterState("dive-attack-left")
       })
       const flyRight = bird.onStateEnter("fly-right", async () => {
         bird.flipX = true
+
+                                        // движение пол секунды
+
         await this.fly(bird, this.ranges[index], 0.5)
         bird.enterState("dive-attack-right")
       })
 
       const diveAttackLeft = bird.onStateEnter("dive-attack-left", async () => {
-        if (!bird.isOffScreen()) play("dive", { volume: 0.05 })
+        if (!bird.isOffScreen()) play("dive", { volume: 0.15 })
         await this.dive(
           bird,
           vec2(
@@ -82,7 +89,7 @@ export class Birds {
       const diveAttackRight = bird.onStateEnter(
         "dive-attack-right",
         async () => {
-          if (!bird.isOffScreen()) play("dive", { volume: 0.05 })
+          if (!bird.isOffScreen()) play("dive", { volume: 0.15 })
           await this.dive(
             bird,
             vec2(

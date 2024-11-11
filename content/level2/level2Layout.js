@@ -1,6 +1,6 @@
 import { generateMappings } from "../generalMappings.js"
 
-export const level2Mappings = generateMappings("brick")
+export const level2Mappings = generateMappings("grass")
 
 export const level2Layout = [
   [
