@@ -1,9 +1,10 @@
 body {
-    overflow: hidden; /* Скрыть прокрутку */
+    /* overflow: hidden; Скрыть прокрутку */
+    color: black;
 }
 #game-canvas {
     width: 100vw; /* Ширина канваса равна ширине окна */
     height: 100vh; /* Высота канваса равна высоте окна */
-    transform: scale(0.8); /* Масштабирование канваса */
+    transform: scale(1); /* Масштабирование канваса */
     transform-origin: top left; /* Масштабирование от верхнего левого угла */
 }
